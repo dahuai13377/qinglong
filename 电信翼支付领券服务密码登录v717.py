@@ -290,7 +290,7 @@ async def get_session_key_async(session, product_no, code):
          "imei": "", "mtMac": "", "wifiMac": "", "location": ""})  # ticket方案
     json_str = json.dumps(data)
     map = {"mkey": mkey, "code": json_str}
-    response = await async_post(session, 'http://[2409:8a5c:1224:4631:980d:519b:3cc5:2]:9898/api/yzf', map)
+    response = await async_post(session, 'http://106.55.6.85:9898/api/yzf', map)
     if response.get('sessionKey'):
         return response.get('sessionKey')
     else:
